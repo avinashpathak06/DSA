@@ -29,51 +29,7 @@ public:
         if(bottomLeftDiagnolCheck[row+col] == true)
             return false;
 
-        return true;
-
-
-	
-  //check karna chahte h , k kya main 
-  //current cell [row,col] pr    QUEEN rakh 
-  //sakta hu ya nahi
-  // int i = row;
-  // int j = col;
-
-  // //check row
-  // while(j >= 0) {
-  //   if(board[i][j] == 'Q') {
-  //     return false;
-  //   }
-  //   j--;
-  // }
-
-  // //check upper left diaglnol 
-  // i = row;
-  // j = col;
-  // while(i>=0 && j>=0 ) {
-  //   if(board[i][j] == 'Q'){
-  //     return false;
-  //   }
-  //   i--;
-  //   j--;
-  // }
-
-
-  // //check bottom left diagnol
-  // i = row;
-  // j = col;
-  // while( i < n && j >=0) {
-  //   if(board[i][j] == 'Q') {
-  //     return false;
-  //   }
-  //   i++;
-  //   j--;
-  // }
-
-  // //kahin pr bhi queen nahi mili
-  // //iska matlab ye position safe hai 
-  // //iska matlab eturn kardo true
-  // return true;   
+        return true;   
 }
 
 
@@ -105,8 +61,7 @@ public:
 
     }
 }
-
-
+    
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<char>> board(n, vector<char>(n,'.'));
         vector<vector<string> > ans;
