@@ -18,11 +18,15 @@ void solve(vector<string> &ans,int index, string output, string              dig
 
         for(int i=0; i<value.length(); i++) {
             char ch = value[i];
+            
+            //include
+            output.push_back(ch);
 
-        
             //recursive call
-            solve(ans, index+1, output + ch, digits, mapping);
-
+            solve(ans, index+1, output, digits, mapping);
+        
+             // backtrack
+            output.pop_back();
         }
 
     }
