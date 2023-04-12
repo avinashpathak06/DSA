@@ -55,7 +55,7 @@ class Solution{
         startingCol++;
     }
     
-    return ans[k-1];
+    return ans[k-1]; //bcz indexing 0 se thi:
    
     }
 
