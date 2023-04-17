@@ -40,6 +40,10 @@ string isSubset(int a1[], int a2[], int n, int m) {
             i++;
             j++;
         }
+        
+        //loop ko poora chalana pdenga :
+        //Agr ye condition nahi likhenge toh loop fs jayenga:
+        //Must step:
         else{
             if(a1[i] < a2[j]) i++;
             else j++;
