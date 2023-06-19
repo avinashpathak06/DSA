@@ -13,9 +13,18 @@ using namespace std;
 string reverseWord(string str){
     
   //Your code here
-  reverse(str.begin(),str.end());
+//   reverse(str.begin(),str.end());
   
-  return str;
+//   return str;
+int i=0;
+int j=str.length()-1;
+
+while(i<j){
+    swap(str[i],str[j]);
+    i++;
+    j--;
+}
+return str;
 }
 
 
