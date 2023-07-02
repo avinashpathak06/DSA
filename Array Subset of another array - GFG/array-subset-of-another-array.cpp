@@ -30,33 +30,20 @@ int main() {
 
 string isSubset(int a1[], int a2[], int n, int m) {
     
-    sort(a1,a1+n);
-    sort(a2,a2+m);
+    unordered_map<int,int>mp,up;
     
-      int i=0,j=0,cnt=0;
-    while(i<n && j<m){
-        if(a1[i] == a2[j]){
-            cnt++;
-            i++;
-            j++;
-        }
-        
-        //loop ko poora chalana pdenga :
-        //Agr ye condition nahi likhenge toh loop fs jayenga:
-        //Must step:
-        else{
-            if(a1[i] < a2[j]) i++;
-            else j++;
-        }
+    for(int i=0;i<n;i++){
+        mp[a1[i]]++;
     }
     
-    if(cnt == m) {
-    return "Yes";
+    for(int i=0;i<m;i++){
+        up[a2[i]]++;
     }
-    else {
+    
+    for(int i=0;i<m;i++){
+        if(mp[a2[i]]<up[a2[i]])
         return "No";
     }
-
- 
+    return "Yes";
     
 }
