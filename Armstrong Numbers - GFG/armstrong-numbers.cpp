@@ -10,20 +10,20 @@ class Solution {
     string armstrongNumber(int n){
         // code here
         int check=n;
-        int squrt=0;
-        int digit =0;
+        int digit=0;
+        int ans=0;
         while(n>0){
             digit=n%10;
-            squrt=squrt+(digit*digit*digit);
+            ans=ans+(digit*digit*digit);
             n=n/10;
+            
         }
-        
-        if(squrt==check){
-            cout<<"Yes";
+     
+        if(ans==check){
+            return "Yes";
         }
-        else{
-            cout<<"No";
-        }
+        return "No";
+       
     }
 };
 
